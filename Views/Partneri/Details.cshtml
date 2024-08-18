@@ -1,0 +1,42 @@
+﻿@model VjencanjeIzSnova_July.Models.Partner
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Partner</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mobitel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mobitel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kategorija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kategorija.KategorijaId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.User.UserId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PartnerId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

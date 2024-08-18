@@ -1,0 +1,157 @@
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.page {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #D8B05D;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.login-button {
+    background-color: #c0737a;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+    .login-button:hover {
+        background-color: #b05059;
+    }
+
+.registracija-button {
+    background-color: #c0737a;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+    .registracija-button:hover {
+        background-color: #b05059;
+    }
+
+.navbar-toggler {
+    border: none;
+}
+
+    .navbar-toggler:focus, .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+.nav-link {
+    color: #241012;
+    font-weight: 500;
+    position: relative;
+}
+
+    .nav-link:hover, .nav-link.active {
+        color: #000;
+    }
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #b05059;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+
+
+
+/*
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+    */

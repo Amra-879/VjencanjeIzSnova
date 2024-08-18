@@ -1,0 +1,56 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+
+.box-area {
+    position: relative;
+    top: 45px;
+    width: 1030px;
+}
+
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}
+
+.left-box {
+    /* background: #b05059; */
+    background: url('../images/registration_image.jpg') no-repeat;
+    background-size: cover;
+}
+
+.left-box-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.left-box-small {
+    width: 17rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.register-button {
+    background: #c0737a;
+}
+
+.google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-icon {
+    width: 20px;
+}

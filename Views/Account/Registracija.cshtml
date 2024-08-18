@@ -1,0 +1,96 @@
+﻿
+@model VjencanjeIzSnova_July.ViewModels.RegistracijaViewModel
+
+@{
+    ViewData["Title"] = "Registracijaa";
+}
+
+<!-- Main Container -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <!-- Registration Container -->
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+            <div class="featured-image mb-3">
+                <i class="bi bi-box-arrow-in-right"></i>
+            </div>
+            <p class="text-white fs-2 left-box-text">Registracija</p>
+            <small class="text-white text-wrap text-center left-box-small">Organizacija vjenčanja nikad nije bila lakša.</small>
+        </div>
+
+        <div class="col-md-6 right-box">
+            <h3>Registracija</h3>
+
+            <form asp-action="Registracija" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Ime" class="form-control form-control-lg bg-light fs-6" placeholder="Ime" />
+                    <label asp-for="Ime">&nbsp; Ime</label>
+                    <span asp-validation-for="Ime" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Prezime" class="form-control form-control-lg bg-light fs-6" placeholder="Prezime" />
+                    <label asp-for="Prezime">&nbsp; Prezime</label>
+                    <span asp-validation-for="Prezime" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Email" class="form-control form-control-lg bg-light fs-6" placeholder="Email adresa" />
+                    <label asp-for="Email">&nbsp; Email adresa</label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Grad" class="form-control form-control-lg bg-light fs-6" placeholder="Grad" />
+                    <label asp-for="Grad">&nbsp; Grad</label>
+                    <span asp-validation-for="Grad" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="DatumVjencanja" class="form-control form-control-lg bg-light fs-6" placeholder="Datum vjenčanja" type="date" />
+                    <label asp-for="DatumVjencanja">&nbsp; Datum vjenčanja </label>
+                    <span asp-validation-for="DatumVjencanja" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Password" class="form-control form-control-lg bg-light fs-6" placeholder="Lozinka" type="password" />
+                    <label asp-for="Password">&nbsp; Lozinka</label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ConfirmPassword" class="form-control form-control-lg bg-light fs-6" placeholder="Potvrdite lozinku" type="password" />
+                    <label asp-for="ConfirmPassword">&nbsp; Potvrdite lozinku</label>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select asp-for="UserType" class="form-control form-control-lg bg-light fs-6">
+                        <option value="Klijent">Klijent</option>
+                        <option value="Partner">Partner</option>
+                        <option value="Planer">Planer</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                    <label asp-for="UserType">&nbsp; Tip korisnika</label>
+                    <span asp-validation-for="UserType" class="text-danger"></span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <button type="submit" class="btn btn-lg btn-primary w-100 fs-6 register-button">Registriraj se</button>
+                </div>
+            </form>
+
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6 google-button">
+                    <img src="images/google_icon.png" class="google-icon me-2" />
+                    <small>Continue with Google</small>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

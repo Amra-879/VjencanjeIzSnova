@@ -1,0 +1,26 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+
+.box-area {
+    position: relative;
+    top: 45px;
+    width: 930px;
+}
+
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}

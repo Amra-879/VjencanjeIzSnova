@@ -1,0 +1,54 @@
+﻿@model VjencanjeIzSnova_July.Models.Usluge
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Usluge</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpisUsluge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OpisUsluge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CjenovniRang)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CjenovniRang)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InfoOKompaniji)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InfoOKompaniji)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalji)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Detalji)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Partner)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Partner.PartnerId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.UslugaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
